@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="mainForm" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         
