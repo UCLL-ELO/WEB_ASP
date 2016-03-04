@@ -1,2 +1,43 @@
-﻿body {
+﻿.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.mid_box{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-color: #191919;
+    font-family: 'Droid Sans', sans-serif !important;
+}
+
+header nav ul{
+    margin: 1px 0;
+    float: right;
+}
+
+header li{
+    display: inline-block;
+    border-right: 1px solid #373737;
+    padding: 8px 10px;
+}
+
+header li:last-child{
+    border-right: 0px none #000000;
+}
+
+header a{
+    color: #bcbcbc;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #ffffff;
 }

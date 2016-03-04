@@ -7,16 +7,27 @@
     <meta charset="utf-8" />
 
     <title>Dit is de titel van de website</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/Default.css" />
     <asp:ContentPlaceHolder ID="headContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="mainForm" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        <header>
+            <nav class="clearfix mid_box">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="mid_box">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
+            </asp:ContentPlaceHolder>
+        </main>
+        
     </form>
 </body>
 </html>
