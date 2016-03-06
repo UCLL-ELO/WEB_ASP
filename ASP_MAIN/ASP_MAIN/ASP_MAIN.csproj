@@ -71,6 +71,7 @@
     <Content Include="MasterPage.Master" />
     <Content Include="public\img\10986812_10205014848025508_6762867493735228449_n.jpg" />
     <Content Include="public\img\167572071_d1.jpg" />
+    <Content Include="public\img\background\047.jpg" />
     <Content Include="Toekomst van elektronica.aspx" />
     <None Include="Properties\PublishProfiles\SOMEE FTP PUSH.pubxml" />
     <None Include="Web.Debug.config">
