@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="algemene elektronica.aspx.cs" Inherits="ASP_MAIN.algemene_elektronica" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
-    <link href="StyleSheet_van_algemene_info.css" rel="stylesheet" />
+    <link href="public/css/StyleSheet_van_algemene_info.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Algemene info</h1>
