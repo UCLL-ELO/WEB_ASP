@@ -7,16 +7,48 @@
     <meta charset="utf-8" />
 
     <title>Dit is de titel van de website</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/Default.css" />
     <asp:ContentPlaceHolder ID="headContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+    <form id="mainForm" runat="server">
+        <header class="topbar">
+            <nav class="clearfix mid_box">
+                <ul>
+                    <li><a href="/Default.aspx">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="mid_box clearfix">
+            <header>
+                <div class="innerheader clearfix">
+                    <div class="logo">
+                        <h1>Website</h1>
+                        <p>Een kleine ondertitel!</p>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/Toekomst van elektronica.aspx">Toekomst van elektronica</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </header>
+            <div class="headerbox">
+                <article>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </article>
+            </div>
+        </main>
     </form>
 </body>
 </html>
