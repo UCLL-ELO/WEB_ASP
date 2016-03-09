@@ -25,13 +25,15 @@
         <main class="mid_box clearfix">
             <header>
                 <div class="innerheader clearfix">
-                    <div class="logo">
+                    <a class="logo" href="Default.aspx">
                         <h1>Website</h1>
                         <p>Een kleine ondertitel!</p>
-                    </div>
+                    </a>
                     <nav>
                         <ul>
-                            <li><a href="/Toekomst van elektronica.aspx">Toekomst van elektronica</a></li>
+                            <li>
+                                <a href="/Toekomst van elektronica.aspx">Toekomst van elektronica</a>
+                            </li>
                             <li><a href="#">Test</a></li>
                             <li><a href="#">Test</a></li>
                             <li><a href="#">Test</a></li>
