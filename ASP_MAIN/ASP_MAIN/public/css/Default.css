@@ -63,15 +63,14 @@ main header div.innerheader{
     padding: 0 20px;
 }
 
-main header div.innerheader a.logo{
+main header div.innerheader div.logo{
     max-width: 220px;
     text-align: left;
     margin: 10px 0;
     float: left;
-    text-decoration: none;
 }
 
-a.logo h1{
+div.logo h1{
     font-family: Arial, Helvetica, sans-serif !important;
     color: #fff;
     font-size: 36px;
@@ -81,7 +80,7 @@ a.logo h1{
     line-height: 1.5;
 }
 
-a.logo p{
+div.logo p{
     font-family: Arial, Helvetica, sans-serif !important;
     color: #bcbcbc;
     margin-top: -10px;
