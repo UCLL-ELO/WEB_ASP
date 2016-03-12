@@ -71,6 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="algemene elektronica.aspx" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -99,7 +103,9 @@
     <Content Include="Global.asax" />
     <Content Include="public\css\Default.css" />
     <Content Include="public\img\electronics-repair.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="algemene elektronica.aspx.cs">
@@ -143,7 +149,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="public\js\" />
   </ItemGroup>
