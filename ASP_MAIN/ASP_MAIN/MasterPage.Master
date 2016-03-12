@@ -13,6 +13,11 @@
 </head>
 <body>
     <form id="mainForm" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
         <main class="mid_box clearfix">
             <header>
                 <div class="innerheader clearfix">
