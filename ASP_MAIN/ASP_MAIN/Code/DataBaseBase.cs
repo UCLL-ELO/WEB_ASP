@@ -25,6 +25,7 @@ namespace ASP_MAIN.Code
             }
             System.Diagnostics.Debug.WriteLine(connection.ConnectionString);
             connection.Close();
+
         }
     }
 }
