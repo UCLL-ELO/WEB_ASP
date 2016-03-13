@@ -76,6 +76,7 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Electronica scholen.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Electronica scholen.aspx.cs">
+      <DependentUpon>Electronica scholen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Electronica scholen.aspx.designer.cs">
+      <DependentUpon>Electronica scholen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
