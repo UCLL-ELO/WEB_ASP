@@ -168,9 +168,21 @@ article h2 {
     font-size: 20px;
 }
 
-article p{
+article p, article li{
     font-family: 'Droid Sans', sans-serif !important;
     color: #6f6f6f;
     font-size: 12px;
     line-height: 1.81em;
+}
+
+article a{
+    font-family: 'Droid Sans', sans-serif !important;
+    font-size: 12px;
+    line-height: 1.81em;
+    color: #c98206;
+    text-decoration: none;
+}
+
+article a:hover{
+    color: #ef9911;
 }
