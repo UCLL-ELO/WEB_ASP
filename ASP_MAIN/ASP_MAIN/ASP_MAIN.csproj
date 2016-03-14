@@ -138,7 +138,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="public\js\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
