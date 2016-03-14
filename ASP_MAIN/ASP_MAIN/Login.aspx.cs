@@ -26,5 +26,24 @@ namespace ASP_MAIN
             }
             dataBase.Close();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            DataBaseBase dataBase = new DataBaseBase();
+            dataBase.Open("MySqlConnection");
+            SqlDataReader reader = dataBase.Read("SELECT * FROM Users WHERE Name='" + TextBox1.Text + "'");
+
+            System.Diagnostics.Debug.WriteLine("START");
+
+            String temp = "";
+
+            while (reader.Read())
+            {
+                temp += Convert.ToString(reader.GetInt32(0)) + ", " + reader.GetString(1) +", " + reader.GetString(2) + "\n";
+                
+            }
+            Label1.Text = temp;
+            dataBase.Close();
+        }
     }
 }
