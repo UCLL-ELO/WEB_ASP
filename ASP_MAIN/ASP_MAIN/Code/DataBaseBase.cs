@@ -12,18 +12,40 @@ namespace ASP_MAIN.Code
         private SqlConnection connection;
         public void Open(String connectionStringName)
         {
+            if(connection != null)
+                if (connection.State != System.Data.ConnectionState.Closed)
+                    connection.Close();
+
             String connectionString = ConfigurationManager.ConnectionStrings[connectionStringName].ConnectionString;
-            System.Diagnostics.Debug.WriteLine(connectionString);
 
             connection = new SqlConnection(connectionString);
             connection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM sys.Tables", connection);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                System.Diagnostics.Debug.WriteLine(reader.GetValue(0) + " " + reader.GetValue(1));
-            }
-            System.Diagnostics.Debug.WriteLine(connection.ConnectionString);
+            
+        }
+
+        public void Write(String SQL)
+        {
+            if (connection != null)
+                if (connection.State == System.Data.ConnectionState.Closed)
+                    return;
+            SqlCommand cmd = new SqlCommand(SQL, connection);
+            cmd.ExecuteNonQuery();
+        }
+
+        public SqlDataReader Read(String SQL)
+        {
+            if (connection != null)
+                if (connection.State == System.Data.ConnectionState.Closed)
+                    return null;
+            SqlCommand cmd = new SqlCommand(SQL, connection);
+            return cmd.ExecuteReader();
+        }
+
+        public void Close()
+        {
+            if (connection != null)
+                if (connection.State == System.Data.ConnectionState.Closed)
+                return;
             connection.Close();
         }
     }
