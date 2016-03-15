@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASP_MAIN
+namespace ASP_LOGIN.Pages
 {
 
 
-    public partial class Electronica_scholen
+    public partial class WebForm1
     {
     }
 }
