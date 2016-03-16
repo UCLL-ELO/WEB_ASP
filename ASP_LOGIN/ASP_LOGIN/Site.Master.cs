@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
@@ -6,7 +7,6 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Microsoft.AspNet.Identity;
 
 namespace ASP_LOGIN
 {
@@ -15,9 +15,12 @@ namespace ASP_LOGIN
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        public ApplicationSignInManager signInManager;
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
@@ -58,23 +61,25 @@ namespace ASP_LOGIN
             }
             else
             {
-                // Validate the Anti-XSRF token
-                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue
-                    || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
-                {
-                    throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
-                }
             }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            signInManager.HasBeenVerified();
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
-            Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            
+        }
+
+        protected void Log_out_Click(object sender, EventArgs e)
+        {
+            var AuthenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            AuthenticationManager.SignOut();
+            Response.Redirect(Request.RawUrl);
         }
     }
 
