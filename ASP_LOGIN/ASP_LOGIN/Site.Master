@@ -45,19 +45,22 @@
                         <li><a href="/Default.aspx">Home</a></li>
                         <li><a href="/OnepageInformatie.aspx">Informatie</a></li>
                         <li><a href="#">Forum</a></li>
+
                         <%
-    if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
-    { %>
+                            if (System.Web.HttpContext.Current.User.Identity.GetUserId() == null)
+                            { %>
                         <li><a href="/Account/Login.aspx">Login</a></li>
                         <%
     }
     else
     { %>
                         <li><a href="/Account/Manage.aspx">Manage account</a></li>
-                        <li><a href="#">Log out</a></li>
+                        <li><asp:LinkButton ID="Log_out" runat="server" OnClick="Log_out_Click">Log out</asp:LinkButton></li>
+                        
                         <%} %>
                     </ul>
                 </div>
+                
             </div>
             <div id="content-wrap">
                 <div id="content">
