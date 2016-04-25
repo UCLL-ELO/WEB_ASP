@@ -265,6 +265,7 @@
     <Compile Include="Areas\Admin\Controllers\BatchController.cs" />
     <Compile Include="Areas\Admin\Controllers\BannedWordController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\Elektronica_webpaginasController.cs" />
     <Compile Include="Controllers\ModerateController.cs" />
     <Compile Include="Areas\Admin\ViewModels\AdminBadgeViewModels.cs" />
     <Compile Include="Areas\Admin\ViewModels\AjaxAdminViewModels.cs" />
@@ -654,6 +655,11 @@
     <Content Include="Content\Images\ajaxloader-large.gif" />
     <Content Include="Content\Images\ajaxloader.gif" />
     <Content Include="Content\Images\arrow-spinner-blue.gif" />
+    <Content Include="Content\Images\ELO\10986812_10205014848025508_6762867493735228449_n.jpg" />
+    <Content Include="Content\Images\ELO\167572071_d1.jpg" />
+    <Content Include="Content\Images\ELO\analoog.png" />
+    <Content Include="Content\Images\ELO\digitaal.jpg" />
+    <Content Include="Content\Images\ELO\electronics-repair.jpg" />
     <Content Include="Content\Images\emoticons\angel-emoticon.png" />
     <Content Include="Content\Images\emoticons\angry-emoticon.png" />
     <Content Include="Content\Images\emoticons\astonished-smiley-emoticon-for-facebook.png" />
@@ -1067,6 +1073,8 @@
     <Content Include="Scripts\tinymce\langs\readme.md" />
     <Content Include="Areas\Admin\Views\Account\ManageUserPoints.cshtml" />
     <Content Include="Themes\Metro\Content\Styles\Theme.css.map" />
+    <Content Include="Views\Elektronica_webpaginas\algemene_elektronica.cshtml" />
+    <Content Include="Views\Shared\SubNavigation.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -1238,7 +1246,6 @@
     <Content Include="Views\Topic\GetSubscribedTopics.cshtml" />
     <Content Include="Views\Home\Following.cshtml" />
     <Content Include="Views\Home\PostedIn.cshtml" />
-    <Content Include="Views\Shared\SubNavigation.cshtml" />
     <Content Include="Views\Topic\TopicsMemberHasPostedIn.cshtml" />
     <Content Include="Views\Favourite\Index.cshtml" />
     <Content Include="Views\Shared\_Badge.cshtml" />
